@@ -1,0 +1,56 @@
+---
+// Importations nécessaires
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import monLogo from '../assets/images/monlogo.png';
+import jason from '../assets/images/moi.png';
+import Techno from '@/components/Techno.tsx';
+import Folders from '../components/folders/Folders.jsx';
+---
+
+<Layout title="Jason.R || Portfolio">
+  <main class="w-[90%] mx-auto max-w-5xl overflow-hidden">
+    <!---------- Header ----------->
+    <header class="py-10">
+      <!------------ Navbar -------------->
+      <nav class="flex items-center justify-between">
+        <Image src={monLogo} class="w-28" alt="logo" />
+      </nav>
+
+      <!---------- Hero Section ----------->
+      <div class="md:flex md:gap-4 md:justify-around items-center py-10">
+        <!---------- Main Image (Jason) and Rotating Images ----------->
+        <div class="md:order-2 md:flex-shrink-0">
+          <div class="w-40 h-40 mx-auto">
+            <Image
+              src={jason}
+              class="rounded-full w-full h-full object-cover border-2 border-slate-600 grayscale drop-shadow-xl"
+              alt="Photo de moi"
+            />
+          </div>
+        </div>
+
+        <!---------- Text Section ----------->
+        <div
+          class="bg-clip-text text-transparent bg-gradient-to-l from-slate-300 to-slate-50"
+        >
+          <h2 class="text-4xl">Développeur React/NodeJS</h2>
+          <p class="text-2xl">
+            Je suis un développeur web passionné par le développement web et
+            mobile.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-------- File Navigation Section ----------->
+    <section class="py-10">
+      <article class="py-10">
+        <Techno client:load />
+      </article>
+      <article class="py-10">
+        <Folders client:load />
+      </article>
+    </section>
+  </main>
+</Layout>
