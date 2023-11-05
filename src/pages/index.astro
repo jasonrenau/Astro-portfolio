@@ -1,15 +1,15 @@
 ---
 // Importations nécessaires
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
-import monLogo from '../assets/images/monlogo.png';
-import jason from '../assets/images/moi.png';
-import Techno from '@/components/Techno.tsx';
-import Folders from '../components/folders/Folders.jsx';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import monLogo from "../assets/images/monlogo.png";
+import jason from "../assets/images/moi.png";
+import Techno from "@/components/Techno.tsx";
+import Folders from "../components/folders/Folders.jsx";
 ---
 
 <Layout title="Jason.R || Portfolio">
-  <main class="w-[90%] mx-auto max-w-5xl overflow-hidden">
+  <main class="mx-auto w-[90%] max-w-5xl overflow-hidden">
     <!---------- Header ----------->
     <header class="py-10">
       <!------------ Navbar -------------->
@@ -18,13 +18,13 @@ import Folders from '../components/folders/Folders.jsx';
       </nav>
 
       <!---------- Hero Section ----------->
-      <div class="md:flex md:gap-4 md:justify-around items-center py-10">
+      <div class="items-center py-10 md:flex md:justify-around md:gap-4">
         <!---------- Main Image (Jason) and Rotating Images ----------->
         <div class="md:order-2 md:flex-shrink-0">
-          <div class="w-40 h-40 mx-auto">
+          <div class="mx-auto h-40 w-40">
             <Image
               src={jason}
-              class="rounded-full w-full h-full object-cover border-2 border-slate-600 grayscale drop-shadow-xl"
+              class="h-full w-full rounded-full border-2 border-slate-600 object-cover drop-shadow-xl grayscale"
               alt="Photo de moi"
             />
           </div>
@@ -32,7 +32,7 @@ import Folders from '../components/folders/Folders.jsx';
 
         <!---------- Text Section ----------->
         <div
-          class="bg-clip-text text-transparent bg-gradient-to-l from-slate-300 to-slate-50"
+          class="bg-gradient-to-l from-slate-300 to-slate-50 bg-clip-text text-transparent"
         >
           <h2 class="text-4xl">Développeur React/NodeJS</h2>
           <p class="text-2xl">
